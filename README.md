@@ -14,6 +14,16 @@ A lightweight PHP 8.4 library to handle graph data structures. No external depen
 
 ## 🔧 Installation
 
+### Composer
+
+Install with Composer
+
+```bash
+composer require neoxium/php-graph
+```
+
+### Download [Latest release](https://github.com/neoxium/php-graph/releases/latest)
+
 No dependencies are required, apart from PHPUnit for testing purpose. Simply clone or copy the files into your project.
 
 ```bash
@@ -29,9 +39,11 @@ php --version
 ```php
 <?php
 
-use Neoxium\Graph\{Graph, Node, Edge, Serializer\GraphSerializer};
+require __DIR__ . '/vendor/autoload.php';
+
+use Neoxium\Graph\{Graph, Node, Edge};
 use Neoxium\Graph\Algorithm\{GraphTraversal, ShortestPath};
-use Neoxium\Graph\Graph\Serializer\GraphSerializer;
+use Neoxium\Graph\Serializer\GraphSerializer;
 
 // Create a non-oriented graph
 $graph = new Graph();
